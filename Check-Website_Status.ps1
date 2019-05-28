@@ -1,3 +1,11 @@
+<#
+Testing to run remotely in Memory
+
+$url = 'https://raw.githubusercontent.com/flightgod/PowerShell/master/Check-Website_Status.ps1'
+iex ((New-Object Net.WebClient).DownloadString($url))
+
+#>
+
 param (
 $Site = "http://google.com"
 )
