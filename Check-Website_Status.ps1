@@ -18,14 +18,14 @@ If ($statusCode -eq 200) {
 #Import and Connect
 Import-Module Microsoft.Online.SharePoint.PowerShell -DisableNameChecking
 
-Connect-SPOService -Url https://ftj1.sharepoint.com
+Connect-SPOService -Url https://test.sharepoint.com
 
 
 # Function to Update SharePoint List
 #Need to make o365 Connection
 Function UpdateStatus {
-    $SPWeb = Get-SPWeb https://ftj1.sharepoint.com/sites/EnterpriseSystems2
-    $List = $SPWeb.Lists["GIAS Environment Status"]
+    $SPWeb = Get-SPWeb https://test.sharepoint.com/sites/EnterpriseSystems2
+    $List = $SPWeb.Lists["Environment Status"]
     $items = $List.Items
 <#    foreach ($item in $items) {
         $taskStatus = $item["Status"]
